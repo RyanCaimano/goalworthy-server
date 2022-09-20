@@ -46,6 +46,7 @@ function handleApiRequest(body, request,response) {
 	if (request.method === 'GET') {
 		// Handle the Get endpoints
 		if (request.url === '/v1/goals') {
+			//stringify will convert the goals array into a json string
 			return response.end(JSON.stringify(goals));
 		} 
 	} else if (request.method === 'POST') {
